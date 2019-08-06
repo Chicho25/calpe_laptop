@@ -162,5 +162,13 @@ $html .='
 <footer>
   Grupo Calpe 1.0 © 2015-16.
 </footer>'; ?>
+<?php if($_POST['id_formato']==1){ ?>
 <?php $mpdf->writeHTML($html); ?>
 <?php $mpdf->Output('reporte_2.pdf', 'I'); ?>
+<?php }else{ ?>
+<?php
+header('Content-Type: application/xls');
+header('Content-Disposition: attachment; filename='.date('d-m-Y').'-ReporteIngreso.xls');
+echo $html;
+}
+ ?>
