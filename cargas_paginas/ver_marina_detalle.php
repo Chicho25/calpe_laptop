@@ -92,7 +92,7 @@
                                                             FROM
                                                             maestro_inmuebles mi left join maestro_ventas mv on mi.id_inmueble = mv.id_inmueble
                                                             WHERE
-                                                            mi.id_grupo_inmuebles in(23,26,24,25)
+                                                            mi.id_grupo_inmuebles in(23,26,24,25,89)
                                                             and
                                                             mi.mi_status not in(17)
                                                             group by mi_nombre
